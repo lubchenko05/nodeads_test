@@ -16,8 +16,8 @@ class CustomGroupAdmin(admin.ModelAdmin):
         'icon',
         'name',
         'description',
-        'get_child_group_count',
-        'get_child_elements_count')
+        'child_group_count',
+        'child_element_count')
 
 
 admin.site.register(Group, CustomGroupAdmin)

@@ -24,10 +24,13 @@ class Group(models.Model):
         default=''
     )
 
-    def get_child_group_count(self):
+    class Meta:
+        ordering = ['id']
+
+    def child_group_count(self):
         return self.child_groups.count()
 
-    def get_child_elements_count(self):
+    def child_element_count(self):
         return self.elements.count()
 
     def __str__(self):
@@ -57,6 +60,9 @@ class Element(models.Model):
         default=timezone.now
     )
     verified = models.NullBooleanField()
+
+    class Meta:
+        ordering = ['id']
 
     def __str__(self):
         return self.name
