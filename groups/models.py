@@ -11,8 +11,8 @@ class Group(models.Model):
         related_name='child_groups'
     )
     icon = models.ImageField(
-        upload_to='images/Groups/',
-        default='images/None/no-element-icon.jpg',
+        upload_to='Images/Groups/',
+        default='Images/None/no-element-icon.jpg',
         validators=[validate_image_extension, ]
     )
     name = models.CharField(
@@ -41,8 +41,8 @@ class Element(models.Model):
         related_name='elements'
     )
     icon = models.ImageField(
-        upload_to='images/Elements/',
-        default='images/None/no-group-icon.jpg',
+        upload_to='Images/Elements/',
+        default='Images/None/no-group-icon.jpg',
         validators=[validate_image_extension, ]
     )
     name = models.CharField(
